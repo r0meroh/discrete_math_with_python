@@ -6,7 +6,9 @@
 
 # function only to check amount as long as it is larger than 8
 def change(amount):
-    assert(amount>= 10)
+    assert(amount>= 7)
+    if amount == 28:
+        return [7,7,7,7]
     if amount == 21:
         return [7,7,7]
     if amount == 19:
@@ -17,10 +19,17 @@ def change(amount):
         return [7,7]
     if amount == 10:
         return [5,5]
+    if amount == 7:
+        return [7]
 
     coins = change(amount - 5)
     coins.append(5)
     return coins
+
+
+
+for x in range(24,1000):
+    print(change(x))
 
 
 amount = int(input('enter amount\n'))
