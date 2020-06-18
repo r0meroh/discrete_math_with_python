@@ -9,5 +9,17 @@ def is_solution(permutation):
             return False
     return True
 
+
+def change_chessBoard_size(new_size):
+    for permutation in itr.permutations(range(new_size)):
+        # print(permutation) uncomment me if you wanna see all attempts
+        if is_solution(permutation):
+            print(permutation)
+            exit()
+
+
 assert(is_solution([1,3,0,2]) == True)
 print(is_solution([1,3,0,2]))
+
+print('checking for size 8')
+change_chessBoard_size(8)
