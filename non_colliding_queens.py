@@ -9,4 +9,5 @@ def is_solution(permutation):
             return False
     return True
 
-print(assert(is_solution([1,3,0,2]) == True))
+assert(is_solution([1,3,0,2]) == True)
+print(is_solution([1,3,0,2]))
